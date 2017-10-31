@@ -72,6 +72,7 @@ for ($i=0; $i < sizeof($v2) ; $i++) {
 
 echo "El máximo es $max<br>";
 echo "El mínimo es $min<br>";
+
  ?>
 
   </body>
