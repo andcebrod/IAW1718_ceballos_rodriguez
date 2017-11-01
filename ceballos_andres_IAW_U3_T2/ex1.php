@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>ex1 php </title>
+    <title>ex1 php</title>
   </head>
 
   <body>
@@ -15,7 +15,7 @@
     echo "<li>".$v1[$i]."</li>";
   }
    ?>
-   
+
 </ul>
 
 
