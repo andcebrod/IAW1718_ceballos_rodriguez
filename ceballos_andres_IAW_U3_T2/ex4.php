@@ -6,16 +6,27 @@
   </head>
   <body>
 
-    <table>
+    <table border="1px solid black">
 
+<thead>
+  <th>Color Name</th>
+  <th>Hex Code</th>
+</thead>
       <?php
-
-      $v1 = array('BlanchedAlmond' => "#ffebcd",
+      $c=["BlanchedAlmond" => "#ffebcd",
       "CadetBlue" => "#5f9ea0",
       "BurlyWood" => "#deb887",
       "DarkOliveGreen" => "#556b2f",
       "HotPink" => "#ff69b4",
-      "Papayawhip" => "#ffefd5");
+      "Papayawhip" => "#ffefd5"];
+
+foreach ($c as $k => $v) {
+  echo "<tr bgcolor='$v'>";
+  echo "<td>$k</td><td>$v</td>";
+  echo "</tr>";
+}
+
+
 
 
 

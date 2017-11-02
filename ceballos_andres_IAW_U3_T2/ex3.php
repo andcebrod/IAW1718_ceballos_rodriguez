@@ -6,28 +6,21 @@
   </head>
   <body>
 
-<table>
+<table border="1px solid black">
 
   <?php
 
-  $var = array
-    (
-    array("A" => 1,"B"=>2,"C"=>3),
-    array("D"=>4,"E"=>5,"F"=>6),
-    array("G"=>7,"H"=>8,"I"=>9),
-    );
-    echo "<tr>";
-    for ($i=0; $i < 3; $i++) {
-      foreach ($var as $key => $value) {
-        echo "<td>"$var[$key][$value]."</td>";
-      };
+  $v=[["A"=>1,"B"=>2,"C"=>3],["D"=>4,"E"=>5, "F"=>6],["G"=>7,"H"=>8,"I"=>9]];
+
+    for ($i=0; $i < sizeof($v); $i++) {
+        echo "<tr>";
+        foreach ($v[$i] as $k => $value) {
+            echo "<td>";
+            echo $k.":".$value;
+            echo "</td>";
+        };
     }
-
-      echo "</tr>";
-
-
-
-
+    echo "</tr>";
    ?>
 
 </table>
