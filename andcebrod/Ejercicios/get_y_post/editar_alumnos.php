@@ -11,10 +11,10 @@
         <?php if (!isset($_POST['email'])) : ?>
 
         <?php
-        echo "<span>Nombre: <input type='text' name='nombre' value='".$_GET['nombre']."'></span>";
-        echo "<span>Apellidos: <input type='text' name='apellidos' value='".$_GET['apellidos']."'></span>";
-        echo "<span>Email: <input type='text' name='email' value='".$_GET['email']."'></span>";
-        echo "<span><input type='submit' name='submit' value='submit'><span>";
+        echo "<p>Nombre: <input type='text' name='nombre' value='".$_GET['nombre']."'></p>";
+        echo "<p> Apellidos: <input type='text' name='apellidos' value='".$_GET['apellidos']."'></p>";
+        echo "<p> Email: <input type='text' name='email' value='".$_GET['email']."'></p>";
+        echo "<p><input type='submit' name='enviar' value='Enviar'><p>";
          ?>
 
        <?php else: ?>

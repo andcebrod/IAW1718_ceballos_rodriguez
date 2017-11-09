@@ -26,19 +26,19 @@
           <td>Pepe</td>
           <td>Perez</td>
           <td>pepeperez@gmail.com</td>
-          <td><a href="editar_alumnos.php?nombre=Pepe&apellidos=Perez&email=pepeperez@gmail.com"><img src="lapiz.png"></a><a href="#"><img src="delete.png"></a></td>
+          <td><a href="editar_alumnos_corregido.php?nombre=Pepe&apellidos=Perez&email=pepeperez@gmail.com"><img src="lapiz.png"></a><a href="#"><img src="delete.png"></a></td>
         </tr>
         <tr>
           <td>Manolo</td>
           <td>Gomez</td>
           <td>manolito@gmail.com</td>
-          <td><a href="editar_alumnos.php?nombre=Manolo&apellidos=Gomez&email=manolito@gmail.com"><img src="lapiz.png"></a><a href="#"><img src="delete.png"></a></td>
+          <td><a href="editar_alumnos_corregido.php?nombre=Manolo&apellidos=Gomez&email=manolito@gmail.com"><img src="lapiz.png"></a><a href="#"><img src="delete.png"></a></td>
         </tr>
         <tr>
           <td>Pedro</td>
           <td>Pino</td>
           <td>pedropedro@gmail.com</td>
-          <td><a href="editar_alumnos.php?nombre=Pedro&apellidos=Pino&email=pedropedro@gmail.com"><img src="lapiz.png"></a><a href="#"><img src="delete.png"></a></td>
+          <td><a href="editar_alumnos_corregido.php?nombre=Pedro&apellidos=Pino&email=pedropedro@gmail.com"><img src="lapiz.png"></a><a href="#"><img src="delete.png"></a></td>
 
         </tr>
 
