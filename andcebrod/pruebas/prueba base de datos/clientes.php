@@ -8,6 +8,8 @@
 
     <?php
 
+
+
       //CREATING THE CONNECTION
       $connection = new mysqli("192.168.1.61", "root", "Admin2015", "tf",3316);
       $connection->set_charset("uft8");
@@ -46,7 +48,7 @@
           while($obj = $result->fetch_object()) {
               //PRINTING EACH ROW
               echo "<tr>";
-                echo "<td><a href='coches_cliente.php?CodCliente=".$obj->CodCliente."'>".$obj->CodCliente."</a></td>";
+                echo "<td><a href='coches_cliente.php?cc=".$obj->CodCliente."'>".$obj->CodCliente."</a></td>";
                 echo "<td>".$obj->Nombre."</td>";
                 echo "<td>".$obj->Apellidos."</td>";
                 echo "<td>".$obj->DNI."</td>";

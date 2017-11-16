@@ -7,7 +7,10 @@
   <body>
 
     <?php
-
+    if (empty($_GET)) {
+      echo "No tengo datos del cliente";
+      exit();
+    }
 
       //CREATING THE CONNECTION
       $connection = new mysqli("192.168.1.61", "root", "Admin2015", "tf",3316);
@@ -21,7 +24,7 @@
 
       //MAKING A SELECT QUERY
       /* Consultas de selección que devuelven un conjunto de resultados */
-        $query="SELECT * from vehiculos where CodCliente=$_GET['CodCliente']";
+        $query=" SELECT * from vehiculos where CodCliente = '".$_GET["cc"]."'";
       if ($result = $connection->query($query)) {
 
           printf("<p>The select query returned %d rows.</p>", $result->num_rows);
@@ -32,11 +35,11 @@
           <table style="border:1px solid black">
           <thead>
             <tr>
-              <th>Matricula</th>
+              <th>Matrícula</th>
               <th>Marca</th>
               <th>Modelo</th>
               <th>Color</th>
-              <th>FechaMatriculacion</th>
+              <th>Fecha de Matriculación</th>
           </thead>
 
       <?php
