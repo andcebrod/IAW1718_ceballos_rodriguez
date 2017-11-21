@@ -18,6 +18,8 @@
   <span>Color: <input type="text" name="Color" value=""></span><br>
   <span>Fecha de Matriculación: <input type="date" name="FechaMatriculacion" value=""></span><br>
 
+  <?php else: ?>
+
   <?php
 
   //CREATING THE CONNECTION
