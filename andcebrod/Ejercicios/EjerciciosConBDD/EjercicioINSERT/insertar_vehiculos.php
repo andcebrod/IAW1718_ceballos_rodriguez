@@ -18,7 +18,6 @@
   <span>Color: <input type="text" name="Color" value=""></span><br>
   <span>Fecha de Matriculación: <input type="date" name="FechaMatriculacion" value=""></span><br>
 
-  <?php else: ?>
 
   <?php
 
@@ -33,14 +32,14 @@
       exit();
   }
 
-      $query="SELECT CodCliente,Nombre,Apellidos from clientes";
+      $query="SELECT DNI,CodCliente,Nombre,Apellidos from clientes order by apellidos";
     if ($result = $connection->query($query)) {
 
     }
       echo "<span>Propietario: </span><select name=CodCliente>";
         while ($obj = $result->fetch_object()) {
             //PRINTING EACH ROW
-            echo "<option value='".$obj->CodCliente."'>".$obj->CodCliente." ".$obj->Nombre." ".$obj->Apellidos."</option>";
+            echo "<option value='".$obj->CodCliente."'>".$obj->DNI." ".$obj->Nombre." ".$obj->Apellidos."</option>";
         }
       echo "</select><br>";
    ?>
