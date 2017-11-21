@@ -8,7 +8,7 @@
   </head>
   <body>
 
-
+<?php if (!isset($_POST["matricula"])) : ?>
 <form action="lista_vehiculos.php" method="post">
 <fieldset>
 
