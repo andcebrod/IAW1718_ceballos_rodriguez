@@ -8,7 +8,7 @@
   </head>
   <body>
 
-<?php if (!isset($_POST["matricula"])) : ?>
+<?php if (!isset($_POST["matricula"])) ?>
 <form action="lista_vehiculos.php" method="post">
 <fieldset>
 
@@ -38,7 +38,7 @@
       echo "<span>Propietario: </span><select name=CodCliente>";
         while ($obj = $result->fetch_object()) {
             //PRINTING EACH ROW
-            echo "<option value='".$obj->CodCliente."'>".$obj->Nombre.", ".$obj->Apellidos."</option>";
+            echo "<option value='".$obj->CodCliente."'>".$obj->CodCliente." ".$obj->Nombre." ".$obj->Apellidos."</option>";
         }
       echo "</select><br>";
    ?>
