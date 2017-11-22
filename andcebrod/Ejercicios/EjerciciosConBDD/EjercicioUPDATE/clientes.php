@@ -17,7 +17,7 @@
 
       <?php
       //CREATING THE CONNECTION
-        $connection = new mysqli("192.168.1.61", "root", "Admin2015", "tf", 3316);
+        $connection = new mysqli("192.168.1.167", "root", "Admin2015", "tf", 3316);
         $connection->set_charset("uft8");
 
 
@@ -47,6 +47,10 @@
       <tbody>
 
         <?php
+
+
+
+
         while($obj = $result->fetch_object()) {
           // VARIABLES PARA NO CONCATENAR
           $codcliente = $obj->CodCliente;
@@ -56,17 +60,21 @@
           $direccion = $obj->Direccion;
           $telefono = $obj->Telefono;
 
+
             //PRINTING EACH ROW
             echo "<tr>";
-              echo "<td>".$obj->CodCliente."</td>";
-              echo "<td>".$obj->Nombre."</td>";
-              echo "<td>".$obj->Apellidos."</td>";
-              echo "<td>".$obj->DNI."</td>";
-              echo "<td>".$obj->Direccion."</td>";
-              echo "<td>".$obj->Telefono."</td>";
-              echo "<td>"."<a href='editar_cliente.php?'><img src='lapiz.png'></a>"."</td>";
+              echo "<td>".$codcliente."</td>";
+              echo "<td>".$nombre."</td>";
+              echo "<td>".$apellidos."</td>";
+              echo "<td>".$DNI."</td>";
+              echo "<td>".$direccion."</td>";
+              echo "<td>".$telefono."</td>";
+              echo "<td>"."<a href='editar_cliente.php?CodCliente=".$codcliente."&Nombre=".$nombre."&Apellidos=".$apellidos."&DNI=".$dni."&Direccion=".$direccion."&Telefono=".$telefono."'><img src='lapiz.png'></a>"."</td>";
             echo "</tr>";
         }
+        $result->close();
+        unset($obj);
+        unset($connection);
 
          ?>
 
