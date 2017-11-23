@@ -13,11 +13,23 @@
   </head>
 
   <body>
-
+    <table style="border:1px solid black">
+    <thead>
+      <tr>
+        <th>CodCliente</th>
+        <th>Nombre</th>
+        <th>Apellidos</th>
+        <th>DNI</th>
+        <th>Direccion</th>
+        <th>Teléfono</th>
+        <th>Opciones</th>
+      </tr>
+    </thead>
+    <tbody>
 
       <?php
       //CREATING THE CONNECTION
-        $connection = new mysqli("192.168.1.167", "root", "Admin2015", "tf", 3316);
+        $connection = new mysqli("192.168.1.61", "root", "Admin2015", "tf", 3316);
         $connection->set_charset("uft8");
 
 
@@ -28,28 +40,13 @@
         }
 
         $query="SELECT * from clientes";
+        if ($result = $connection->query($query)) {
 
-      ?>
-
-
-      <table style="border:1px solid black">
-      <thead>
-        <tr>
-          <th>CodCliente</th>
-          <th>DNI</th>
-          <th>Nombre</th>
-          <th>Apellidos</th>
-          <th>Direccion</th>
-          <th>Teléfono</th>
-          <th>Opciones</th>
-        </tr>
-      </thead>
-      <tbody>
+            printf("<p>The select query returned %d rows.</p>", $result->num_rows);
+}
+        ?>
 
         <?php
-
-
-
 
         while($obj = $result->fetch_object()) {
           // VARIABLES PARA NO CONCATENAR
@@ -66,7 +63,7 @@
               echo "<td>".$codcliente."</td>";
               echo "<td>".$nombre."</td>";
               echo "<td>".$apellidos."</td>";
-              echo "<td>".$DNI."</td>";
+              echo "<td>".$dni."</td>";
               echo "<td>".$direccion."</td>";
               echo "<td>".$telefono."</td>";
               echo "<td>"."<a href='editar_cliente.php?CodCliente=".$codcliente."&Nombre=".$nombre."&Apellidos=".$apellidos."&DNI=".$dni."&Direccion=".$direccion."&Telefono=".$telefono."'><img src='lapiz.png'></a>"."</td>";
