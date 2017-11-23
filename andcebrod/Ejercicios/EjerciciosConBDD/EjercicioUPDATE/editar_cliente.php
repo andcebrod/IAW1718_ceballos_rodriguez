@@ -46,13 +46,25 @@
      </form>
     <?php else: ?>
 
-        <?php $query="UPDATE clientes SET
-        DNI='".$_POST['DNI']."',
-        Nombre='".$_POST['Nombre']."',
-        Apellidos='".$_POST['Apellidos']."',
-        Direccion='".$_POST['Direccion']."',
-        Telefono='".$_POST['Telefono']."'
-        WHERE CodCliente='".$_POST['CodCliente']."'"; ?>
+    <?php
+
+    $codcliente =$_POST['CodCliente'];
+    $nombre = $_POST['Nombre'];
+    $apellidos = $_POST['Apellidos'];
+    $dni = $_POST['DNI'];
+    $direccion = $_POST['Direccion'];
+    $telefono = $_POST['Telefono'];
+
+      $query= "UPDATE clientes SET Nombre='$nombre', Apellidos='$apellidos', DNI='$dni', Direccion='$direccion', Telefono='$telefono' WHERE CodCliente = $codcliente ";
+
+      echo $query;
+      if ($result = $connection->query($query)) {
+        echo "<h1>Datos actualizados</h1>";
+      } else {
+        echo "<h2>Error al actualizar los datos</h2>";
+      }
+
+      ?>
 
         <?php endif ?>
 
