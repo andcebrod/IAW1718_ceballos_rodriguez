@@ -5,9 +5,10 @@
     <title>ASIGNAR </title>
   </head>
   <body>
-
+<?php if (!isset($_POST["codempleado"])) : ?>
     <form method="post">
       <fieldset>
+
         <?php
 
         //CREATING THE CONNECTION
@@ -25,16 +26,28 @@
           if ($result = $connection->query($query)) {
 
           }
-            echo "<span>Propietario: </span><select name=CodCliente>";
+            echo "<span>Asignar reparacion a: </span><select name=codempleado>";
               while ($obj = $result->fetch_object()) {
                   //PRINTING EACH ROW
-                  echo "<option value='".$obj->CodEmpleado."'>".$obj->DNI." ".$obj->Nombre." ".$obj->Apellidos."</option>";
+                  echo "<option value='".$obj->CodEmpleado."'>".$obj->Apellidos.", ".$obj->Nombre." ".$obj->DNI." ".$obj->CodEmpleado."</option>";
               }
             echo "</select><br>";
          ?>
-         <input type="submit" name="asignar" value="Asignar">
+         <input type="submit" name="submit" value="Asignar">
+
+
       </fieldset>
     </form>
+
+      <?php else: ?>
+
+
+    <?php
+
+        $query2 = "UPDATE intervienen SET CodEmpleado='".$_POST['codempleado']."' WHERE IdReparacion='".$_GET['IdReparacion']."'";
+
+     ?>
+
 
   </body>
 </html>
