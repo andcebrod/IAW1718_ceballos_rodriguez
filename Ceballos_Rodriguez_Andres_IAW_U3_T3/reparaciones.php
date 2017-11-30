@@ -69,7 +69,7 @@
                 echo "<td>".$reparado."</td>";
                 echo "<td>".$observaciones."</td>";
                 echo "<td>"."<a href='borrar.php?IdReparacion=".$idrep."'><img src='delete.png'></a>".
-                "<a href='asignar.php?IdReparacion=".$idrep."&Matricula=".$matr."&FechaEntrada=".$fechEnt."&Km=".$km."&Averia=".$averia."&FechaSalida=".$fechSal."&Reparado=".$reparado."&Observaciones=".$observaciones."'><img src='user.png'></a>".
+                "<a href='asignar.php?IdReparacion=".$idrep."'><img src='user.png'></a>".
                 "<a href='informe.php?IdReparacion=".$idrep."&Matricula=".$matr."&FechaEntrada=".$fechEnt."&Km=".$km."&Averia=".$averia."&FechaSalida=".$fechSal."&Reparado=".$reparado."&Observaciones=".$observaciones."'><img src='view.png'></a>"."</td>";
               echo "</tr>";
           }
